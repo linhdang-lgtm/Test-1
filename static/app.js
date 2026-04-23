@@ -59,10 +59,20 @@ async function render() {
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = document.getElementById("name").value.trim();
-  const quantity = Number(document.getElementById("quantity").value);
-  const price = Number(document.getElementById("price").value);
+  const quantityValue = document.getElementById("quantity").value;
+  const priceValue = document.getElementById("price").value;
+  const quantity = Number(quantityValue);
+  const price = Number(priceValue);
 
-  if (!name || !Number.isInteger(quantity) || quantity < 0 || Number.isNaN(price) || price < 0) {
+  if (
+    !name ||
+    quantityValue === "" ||
+    priceValue === "" ||
+    !Number.isInteger(quantity) ||
+    quantity < 0 ||
+    !Number.isFinite(price) ||
+    price < 0
+  ) {
     alert("Please provide a valid name, quantity, and price.");
     return;
   }

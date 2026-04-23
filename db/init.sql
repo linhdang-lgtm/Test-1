@@ -1,10 +1,3 @@
-CREATE TABLE IF NOT EXISTS products (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    quantity INTEGER NOT NULL CHECK (quantity >= 0),
-    price REAL NOT NULL CHECK (price >= 0)
-);
-
 INSERT INTO products (name, quantity, price) VALUES
 ('Tennis Racket Pro 300', 18, 129.99),
 ('Junior Tennis Racket 25in', 22, 69.50),
