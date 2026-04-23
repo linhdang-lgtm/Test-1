@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS products (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    quantity INTEGER NOT NULL CHECK (quantity >= 0),
+    price REAL NOT NULL CHECK (price >= 0)
+);
+
+INSERT INTO products (name, quantity, price) VALUES
+('Tennis Racket Pro 300', 18, 129.99),
+('Junior Tennis Racket 25in', 22, 69.50),
+('Badminton Racket SpeedLite', 30, 54.00),
+('Squash Racket Carbon X', 16, 99.95),
+('Pickleball Paddle Control+', 28, 89.00),
+('Padel Racket Attack 360', 14, 149.00),
+('Tennis Ball Can (3-Pack)', 80, 7.99),
+('Pressureless Practice Balls', 45, 11.25),
+('Badminton Shuttlecock Tube', 50, 14.75),
+('Overgrip Tape (3-Pack)', 65, 8.40),
+('Replacement Grip Cushion', 42, 6.90),
+('Tennis String Set 16G', 34, 15.60),
+('String Dampener (2-Pack)', 38, 5.20),
+('Racket Vibration Wristband', 26, 12.10),
+('Court Shoes Men', 24, 119.00),
+('Court Shoes Women', 27, 114.00),
+('Tennis Backpack 9-Racket', 19, 84.50),
+('Racket Thermo Bag 6-Pack', 21, 94.00),
+('Elbow Support Strap', 33, 17.30),
+('Portable Ball Hopper', 12, 63.80);
